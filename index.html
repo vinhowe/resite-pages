@@ -31,12 +31,25 @@
         padding: 0.75rem 1rem;
       }
     </style>
-  </head>
+  <style>
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style></head>
   <body>
     <div class="center">
       <div class="input-row">
         <textarea rows="1" id="input"></textarea>
-        <button id="submit">resite</button>
+        <button id="submit" class="spin">resite</button>
       <input type="text" id="new-input"></div>
     </div>
   
