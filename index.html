@@ -41,4 +41,106 @@
     </div>
   
 
-<div style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: url(&quot;https://i.imgur.com/8wV7PRD.png&quot;) 0px 0px repeat; opacity: 0.5; pointer-events: none;"></div></body></html>
+<div style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: url(&quot;https://i.imgur.com/8wV7PRD.png&quot;) 0px 0px repeat; opacity: 0.5; pointer-events: none;"></div><script>
+  // Create the monument container
+  const monument = document.createElement('div');
+  monument.style.background = 'linear-gradient(to bottom, #7b2cbf, #e55d87)';
+  monument.style.padding = '2rem';
+  monument.style.margin = '2rem';
+  monument.style.borderRadius = '10px';
+  monument.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.4)';
+  document.body.appendChild(monument);
+
+  // Create the monument title
+  const title = document.createElement('h1');
+  title.textContent = 'Magical Monument to Caffeine';
+  title.style.textAlign = 'center';
+  title.style.fontFamily = 'cursive';
+  monument.appendChild(title);
+
+  // Create the monument image
+  const image = document.createElement('img');
+  image.src = 'https://i.imgur.com/7NzpOjO.jpg';
+  image.alt = 'Magical Monument to Caffeine';
+  image.style.display = 'block';
+  image.style.margin = '0 auto';
+  monument.appendChild(image);
+
+  // Create the monument quotes
+  const quotes = [
+    {
+      quote: 'Coffee is the common man's gold, and like gold, it brings to every man the feeling of luxury and nobility.',
+      author: 'Sheik Abd-al-Kadir'
+    },
+    {
+      quote: 'Without my morning coffee I'm just like a dried up piece of roast goat.',
+      author: 'Johann Sebastian Bach'
+    },
+    {
+      quote: 'The powers of a man's mind are directly proportioned to the quantity of coffee he drinks.',
+      author: 'Sir James Mackintosh'
+    },
+    {
+      quote: 'I would rather suffer with coffee than be senseless.',
+      author: 'Napoleon Bonaparte'
+    },
+    {
+      quote: 'Black as the devil, hot as hell, pure as an angel, sweet as love.',
+      author: 'Charles Maurice de Talleyrand'
+    },
+    {
+      quote: 'I would rather do anything than drink hot chocolate after noon.',
+      author: 'Jane Austen'
+    },
+    {
+      quote: 'Coffee should be black as hell, strong as death, and sweet as love.',
+      author: 'Turkish proverb'
+    },
+    {
+      quote: 'Coffee is a language in itself.',
+      author: 'Jackie Chan'
+    },
+    {
+      quote: 'I believe humans get a lot done, not because we're smart, but because we have thumbs so we can make coffee.',
+      author: 'Flash Rosenberg'
+    },
+    {
+      quote: 'Coffee is the best thing to douse the sunrise with.',
+      author: 'Drew Sirtors'
+    }
+  ];
+
+  // Create the monument quote container
+  const quoteContainer = document.createElement('div');
+  quoteContainer.style.margin = '2rem';
+  monument.appendChild(quoteContainer);
+
+  // Loop through the quotes and create elements
+  quotes.forEach(function(quote) {
+    const quoteEl = document.createElement('blockquote');
+    quoteEl.textContent = quote.quote;
+    quoteEl.style.fontStyle = 'italic';
+    quoteEl.style.fontSize = '1.25rem';
+    quoteEl.style.lineHeight = '1.5';
+    quoteContainer.appendChild(quoteEl);
+
+    const authorEl = document.createElement('cite');
+    authorEl.textContent = quote.author;
+    authorEl.style.display = 'block';
+    authorEl.style.marginTop = '1rem';
+    authorEl.style.fontWeight = 'bold';
+    quoteEl.appendChild(authorEl);
+  });
+
+  // Add a sparkle effect to the background
+  const sparkle = document.createElement('div');
+  sparkle.style.position = 'fixed';
+  sparkle.style.top = '0';
+  sparkle.style.left = '0';
+  sparkle.style.width = '100%';
+  sparkle.style.height = '100%';
+  sparkle.style.background = 'url(https://i.imgur.com/8wV7PRD.png) repeat 0 0';
+  sparkle.style.opacity = '0.5';
+  sparkle.style.pointerEvents = 'none';
+  document.body.appendChild(sparkle);
+</script></body></html>
