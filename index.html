@@ -107,4 +107,42 @@
     </div>
   
 
-<canvas width="400" height="400"></canvas><script></script><img src="https://i.imgur.com/YA0G0dn.jpg" style="width: 300px; height: auto;"><script></script><p style="font-size: 1.5rem; text-align: center;">We will always remember the cutest cat in the world. She brought joy and happiness to everyone who knew her. Rest in peace, sweet kitty.</p></body></html>
+<canvas width="400" height="400"></canvas><script></script><img src="https://i.imgur.com/YA0G0dn.jpg" style="width: 300px; height: auto;"><script></script><p style="font-size: 1.5rem; text-align: center;">We will always remember the cutest cat in the world. She brought joy and happiness to everyone who knew her. Rest in peace, sweet kitty.</p><script>
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+const numCats = 10;
+const cats = [];
+
+for (let i = 0; i < numCats; i++) {
+  const cat = {
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    dx: Math.random() * 6 - 3,
+    dy: Math.random() * 6 - 3,
+    size: 50,
+    img: new Image(),
+  };
+  cat.img.src = 'https://i.imgur.com/jw4iKj1.png';
+  cats.push(cat);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < cats.length; i++) {
+    const cat = cats[i];
+    ctx.drawImage(cat.img, cat.x, cat.y, cat.size, cat.size);
+    cat.x += cat.dx;
+    cat.y += cat.dy;
+    if (cat.x < 0 || cat.x > canvas.width - cat.size) {
+      cat.dx = -cat.dx;
+    }
+    if (cat.y < 0 || cat.y > canvas.height - cat.size) {
+      cat.dy = -cat.dy;
+    }
+  }
+  window.requestAnimationFrame(draw);
+}
+
+draw();
+</script></body></html>
