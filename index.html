@@ -1,50 +1,82 @@
 <html lang="en" ml-update="aware"><head>
     <title>resite</title>
-    <style>
-      * {
-        font-family: sans-serif;
-      }
-      .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .input-row {
-        display: flex;
-        gap: 1rem;
-      }
-      .input-row > * {
-        border: 1px solid blueviolet;
-        background: none;
-        font-size: 1rem;
-        outline: none;
-      }
-      #input {
-        width: 300px;
-        resize: none;
-        padding: 0.75rem;
-      }
-      #submit {
-        cursor: pointer;
-        color: blueviolet;
-        padding: 0.75rem 1rem;
-      }
-    </style>
+    
   <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F8F8FF;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .input-row > * {
+    border: none;
+    background: #fff;
+    font-size: 1.2rem;
+    outline: none;
+  }
+  
+  #input {
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    height: 50px;
+    padding: 0.75rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #submit {
+    cursor: pointer;
+    color: #fff;
+    background-color: #6C63FF;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #submit:hover {
+    background-color: #483CFF;
+  }
+  
   .angry {
-    background-color: red;
-    color: white;
+    animation: shake 0.5s ease-in-out infinite;
   }
-  .bounce {
-    animation: bounce 0.5s infinite alternate;
-  }
-  @keyframes bounce {
-    from {
-      transform: translateY(-5px);
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
     }
-    to {
-      transform: translateY(5px);
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
 </style></head>
